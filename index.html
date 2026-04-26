@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GZ3D | Ultimate Gaming Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style game zone.css">
+</head>
+<body>
+
+<div class="app-container">
+    <nav class="sidebar">
+        <div class="logo">GZ<span>3D</span></div>
+        <ul class="nav-links">
+            <li class="active"><i class="fas fa-bolt"></i></li>
+            <li><i class="fas fa-ghost"></i></li>
+            <li><i class="fas fa-rocket"></i></li>
+            <li><i class="fas fa-skull"></i></li>
+        </ul>
+    </nav>
+
+    <main class="game-view">
+        <header class="top-bar">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="pokiSearch" placeholder="Chercher un jeu ">
+        </div>
+            <div class="music-player" id="musicBtn">
+                <i class="fas fa-compact-disc fa-spin"></i>
+                <span id="trackName">Daft Punk - Technologic</span>
+            </div>
+        </header>
+
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="GAME ZONE 3D">GAME ZONE 3D</h1>
+                <p>Attention : Jouer ici peut provoquer une explosion de fun. 🚀</p>
+                <button class="btn-play" id="mainPlayBtn">MODE ALÉATOIRE !</button>
+            </div>
+        </div>
+
+        <section class="grid-section">
+            <h3><i class="fas fa-trophy"></i> LES JEUX LES PLUS FOUS</h3>
+            <div class="game-grid">
+                <div class="card" data-game="Temple Run" data-url="https://poki.com/fr/g/temple-run-2">
+                    <div class="card-img img1"><span class="tag">POKI</span></div>
+                    <div class="card-info"><h4>Temple Run 2</h4><p>Course infinie</p></div>
+                </div>
+
+                <div class="card" data-game="Moto X3M" data-url="https://poki.com/fr/g/moto-x3m">
+                    <div class="card-img img2"><span class="tag">HOT</span></div>
+                    <div class="card-info"><h4>Moto X3M</h4><p>Cascade Bike</p></div>
+                </div>
+
+                <div class="card" data-game="Shell Shockers" data-url="https://www.crazygames.com/game/shell-shockers">
+                    <div class="card-img img3"><span class="tag">FPS</span></div>
+                    <div class="card-info"><h4>Shell Shockers</h4><p>Combat d'œufs</p></div>
+                </div>
+
+                <div class="card" data-game="Dino Chrome" data-url="https://chromedino.com/">
+                    <div class="card-img img4"><span class="tag">RETRO</span></div>
+                    <div class="card-info"><h4>Dino Chrome</h4><p>Classique</p></div>
+                </div>
+
+                <div class="card" data-game="Slope" data-url="https://www.crazygames.com/game/slope">
+                    <div class="card-img img5"><span class="tag">3D</span></div>
+                    <div class="card-info"><h4>Slope</h4><p>Vitesse pure</p></div>
+                </div>
+
+                <div class="card" data-game="Friday Night Funkin" data-url="https://poki.com/fr/g/friday-night-funkin">
+                    <div class="card-img img6"><span class="tag">MUSIC</span></div>
+                    <div class="card-info"><h4>FNF</h4><p>Rythme</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <aside class="chat-panel">
+        <div class="chat-header"><h3>Chat des Légendes</h3></div>
+        <div class="chat-messages" id="chatBox"></div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Lâche un troll...">
+            <button id="sendBtn" title="Envoyer le message"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </aside>
+</div>
+
+<script src="https://cdn.ably.com/lib/ably.min-1.js"></script>
+<script src="function game zone.js"></script>
+
+<audio id="bgMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3" type="audio/mpeg">
+    Ton navigateur ne supporte pas la musique.
+</audio>
+
+<div class="music-player" id="musicBtn" style="cursor:pointer;">
+    <i class="fas fa-compact-disc"></i>
+    <span id="trackName">Musique : PAUSE</span>
+</div>
+
+</body>
+</html>
